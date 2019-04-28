@@ -10,6 +10,7 @@ const Store = require('./utils/Store')
 const user = require('./routes/user')
 const query = require('./routes/query')
 const insert = require('./routes/insert')
+const update = require('./routes/update')
 
 // error handler
 onerror(app)
@@ -57,6 +58,7 @@ app.use(async (ctx, next) => {
 app.use(user.routes(), user.allowedMethods())
 app.use(query.routes(), query.allowedMethods())
 app.use(insert.routes(), insert.allowedMethods())
+app.use(update.routes(), update.allowedMethods())
 
 // error-handling
 app.on('error', (err, ctx) => {

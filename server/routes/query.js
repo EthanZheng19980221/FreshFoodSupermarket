@@ -13,5 +13,6 @@ router.get('/meat', controllers.goods.meat)
 router.get('/dairy', controllers.goods.dairy)
 router.get('/address', controllers.user.address)
 router.get('/order', controllers.admin.order)
-
+//配送页面，显示状态为1的订单
+router.get('/delivery', controllers.admin.delivery)
 module.exports = router
